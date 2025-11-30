@@ -54,26 +54,3 @@ int main() {
     
     return 0;
 }
-
-// Optimized O(n) solution using sliding window:
-/*
-int maxSumSubarray(int arr[], int n, int k) {
-    if (k > n) return -1;
-    
-    // Calculate sum of first window
-    int window_sum = 0;
-    for (int i = 0; i < k; i++) {
-        window_sum += arr[i];
-    }
-    
-    int max_sum = window_sum;
-    
-    // Slide the window
-    for (int i = k; i < n; i++) {
-        window_sum = window_sum - arr[i - k] + arr[i];
-        max_sum = (window_sum > max_sum) ? window_sum : max_sum;
-    }
-    
-    return max_sum;
-}
-*/

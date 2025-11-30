@@ -47,26 +47,3 @@ int main() {
     
     return 0;
 }
-
-// Follow-up: O(n) solution
-/*
-int findPivotIndex(int nums[], int n) {
-    int total_sum = 0, left_sum = 0;
-    
-    // Calculate total sum
-    for (int i = 0; i < n; i++) {
-        total_sum += nums[i];
-    }
-    
-    // Check each index
-    for (int i = 0; i < n; i++) {
-        // Right sum = total_sum - left_sum - nums[i]
-        if (left_sum == total_sum - left_sum - nums[i]) {
-            return i;
-        }
-        left_sum += nums[i];
-    }
-    
-    return -1;
-}
-*/

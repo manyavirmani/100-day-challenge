@@ -25,7 +25,7 @@ int main() {
     printf("\n");
     printf("x: %d\n", x);
     
-    // Find ceil of x (smallest element >= x)
+
     for (i = 0; i < n; i++) {
         if (arr[i] >= x) {
             ceil_index = i;
@@ -43,19 +43,3 @@ int main() {
     return 0;
 }
 
-// Follow-up: O(log n) solution using binary search
-/*
-int findCeil(int arr[], int n, int x) {
-    int left = 0, right = n - 1, result = -1;
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
-        if (arr[mid] >= x) {
-            result = mid;
-            right = mid - 1; // Continue searching left for smaller index
-        } else {
-            left = mid + 1;
-        }
-    }
-    return result;
-}
-*/

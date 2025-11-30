@@ -52,28 +52,3 @@ int main() {
     
     return 0;
 }
-
-// Follow-up: O(n) solution using Boyer-Moore Voting Algorithm
-/*
-int findMajority(int nums[], int n) {
-    int candidate = 0, count = 0;
-    
-    // Phase 1: Find candidate
-    for (int i = 0; i < n; i++) {
-        if (count == 0) {
-            candidate = nums[i];
-        }
-        count += (nums[i] == candidate) ? 1 : -1;
-    }
-    
-    // Phase 2: Verify candidate
-    count = 0;
-    for (int i = 0; i < n; i++) {
-        if (nums[i] == candidate) {
-            count++;
-        }
-    }
-    
-    return (count > n/2) ? candidate : -1;
-}
-*/
